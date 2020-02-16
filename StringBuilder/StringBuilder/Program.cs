@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
+using System.Text;
 
-namespace StringBuilder
+namespace StringBuilder1
 {
     class Program
     {
@@ -73,10 +74,21 @@ namespace StringBuilder
             WriteLine(FirstLast("Shahane"));
             /////////////////////////////////////////////////////////////////////
             string nm = "Shahane";
-            WriteLine(nm.IndexOf("hane")); 
+            WriteLine(nm.IndexOf("hane"));
 
+            StringBuilder1 sb = new StringBuilder1(25);
+            StringBuilder1 db = new StringBuilder1("Welcome to Tutlane", 25);
+            WriteLine(sb);
+            WriteLine(db);
 
+            ///////////////////////////////////////////////////////////////////
+            int amount = 146;
 
+            StringBuilder hb = new StringBuilder("Total");
+
+            hb.AppendFormat(": {0:c}", amount);
+
+            Console.WriteLine(hb);
         }
         public static string FirstLast(string name)
         {
