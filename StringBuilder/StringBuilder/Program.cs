@@ -15,7 +15,7 @@ namespace StringBuilder
             string usg = msg.Replace("Shahane", "Anahit");
             WriteLine("oldstring={0}", msg);
             WriteLine("newstring={0}", usg);
-
+            //////////////////////////////////////////////////////////////
 
             string msg1 = "Welcome to";
 
@@ -23,7 +23,7 @@ namespace StringBuilder
 
             Console.WriteLine("Message: {0}", string.Concat(msg1, msg2));
 
-
+            ///////////////////////////////////////////////////////////////
 
             string name1 = "Suresh";
 
@@ -38,12 +38,13 @@ namespace StringBuilder
             Console.WriteLine("\nPress Enter Key to Exit..");
 
             Console.ReadLine();
+            //////////////////////////////////////////////////////////////////////
             string gsg = "Welcome to Tutlane";
 
             string subtxt = "Tutlane";
 
             Console.WriteLine("Does {0} String Contains {1}?: {2}", msg, subtxt, msg.Contains(subtxt));
-
+            ////////////////////////////////////////////////////////////////////////////
             string subtxt1 = "tutlane";
 
             StringComparison comp = StringComparison.OrdinalIgnoreCase;
@@ -55,9 +56,9 @@ namespace StringBuilder
             Console.WriteLine("\nPress Enter Key to Exit..");
 
             Console.ReadLine();
-
-            string dsg= "ShahaneVardazaryan";
-            WriteLine(dsg.Substring(7,5));
+            //////////////////////////////////////////////////////////////////////
+            string dsg = "ShahaneVardazaryan";
+            WriteLine(dsg.Substring(7, 5));
 
             string ssh = "Shahane";
             string gh = "Garik";
@@ -68,8 +69,19 @@ namespace StringBuilder
             string sg = string.Format(s, "Suresh", "Dasari", "Hyderabad", 32);
 
             Console.WriteLine("Format Result: {0}", sg);
+            ////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+            WriteLine(FirstLast("Shahane"));
+            /////////////////////////////////////////////////////////////////////
+            string nm = "Shahane";
+            WriteLine(nm.IndexOf("hane")); 
 
 
+
+        }
+        public static string FirstLast(string name)
+        {
+            return name.Length >1 
+                ? name.Substring(0,1) : name;
         }
     }
 }
